@@ -13,11 +13,10 @@ public class TableSorts {
 		  test[i] = gen.nextInt(100);
 	  }
 	  Table testTab = new Table(test);
-	  testTab.bubbleSort();
-	  for( int i = 0 ; i < testTab.tab.length ; i++)
-	  {
-		  System.out.print(testTab.tab[i] + " ");
-	  }
-	
+	//  testTab.bubbleSort();	
+      testTab.printTable();
+	//  testTab.insertSort();
+      testTab.selectionSort();
+	  testTab.printTable();
 }
 }

@@ -8,6 +8,26 @@ public class Table {
 	{
 		this.tab = table;
 	}
+	//set table
+	public void setTable(int [] table)
+	{
+		this.tab = table;
+	}
+	//get table
+	public int [] getTable()
+	{
+		return tab;
+	}
+	//print table
+	public void printTable()
+	{
+		  for( int i = 0 ; i < this.tab.length ; i++)
+		  {
+			  System.out.print(this.tab[i] + " ");
+		  }
+		  //newline
+		  System.out.print("\n");
+	}
 	// BubbleSort - zlozonosc O(n^2)
 	public void bubbleSort()
 	{
@@ -32,5 +52,44 @@ public class Table {
 				break;
     }
 	}
+	//Insert Sort
+	public void insertSort()
+	{
+		for( int j = 2 ;  j < this.tab.length ; j++)
+		{
+			int key = this.tab[j];
+			int i = j - 1;
+			while ( i >= 0 && this.tab[i] > key)
+			{
+				this.tab[i+1] = this.tab[i];
+				i = i -1;
+				this.tab[i+1] = key;
+			}			
+		}
+	}
+	//Selection Sort
+	public void selectionSort()
+	{
+	for( int i = 0 ; i <  this.tab.length - 1 ; i++)
+	{
+		int ind = i;
+		for(int j = i + 1 ; j < this.tab.length; j++)
+		{
+			if(this.tab[j] < this.tab[ind])
+			{
+				ind = j;
+			}			
+		}
+		int temp = this.tab[ind];
+		this.tab[ind] = this.tab[i];
+		this.tab[i]= temp;
+	}
+	}
+	 
+	 
+	 
 	
-}
+	
+}	
+	
+
