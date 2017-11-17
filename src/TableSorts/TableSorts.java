@@ -16,7 +16,8 @@ public class TableSorts {
 	//  testTab.bubbleSort();	
       testTab.printTable();
 	//  testTab.insertSort();
-      testTab.selectionSort();
+     // testTab.selectionSort();
+      testTab.quicksort(0, testTab.tab.length-1);
 	  testTab.printTable();
 }
 }

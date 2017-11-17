@@ -85,6 +85,31 @@ public class Table {
 		this.tab[i]= temp;
 	}
 	}
+    //quicksort
+	public void quicksort(int left, int right)
+	{
+		int i,j,pivot;
+		i = (left + right)/2;
+		pivot = this.tab[i];
+		this.tab[i] = this.tab[right];
+		for(j = i = left ; i < right ; i++)
+		{
+			if(this.tab[i] < pivot)
+			{
+				int tmp = this.tab[i];
+				this.tab[i] = this.tab[j];
+				this.tab[j] = tmp;
+				j++;		      
+			}			
+		}
+		this.tab[right] = this.tab[j];
+		this.tab[j] = pivot;
+		if(left < j - 1)
+			quicksort(left, j -1);
+		if(j+1 < right)
+			quicksort(j+1, right);			
+	}
+	
 	 
 	 
 	 
